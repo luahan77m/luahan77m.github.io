@@ -35,11 +35,13 @@ portrait_caption: >-
 
 education:
 - name: University of Pennsylvania
+  logo: /assets/images/badges/University_of_Pennsylvania.jpg
   position: >- 
     B.S. in Physics <br/>
     B.A. in Economics
   date: 1992 - 1997
 - name: Queen's University
+  logo: /assets/images/badges/Queen_University.jpg
   position: Physics and Economics (Incomplete)
   date: 1990 - 1992
 
