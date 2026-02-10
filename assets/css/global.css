@@ -84,8 +84,9 @@ a:hover {
     font-weight: 600;
 }
 
-/* Remove Cards - Content First */
-.card {
+/* Remove Cards Only for Sidebar - Keep Content Cards */
+.col-lg-3 .card,
+.col-md-4 .card {
     background: transparent !important;
     border: none !important;
     border-radius: 0 !important;
@@ -94,7 +95,24 @@ a:hover {
     margin-bottom: 5rem;
 }
 
-.card-body {
+.col-lg-3 .card-body,
+.col-md-4 .card-body {
+    padding: 0;
+}
+
+/* Keep Cards for Main Content Area */
+.col-lg-9 .card,
+.col-md-8 .card {
+    background: white !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    padding: 2rem !important;
+    margin-bottom: 2rem;
+}
+
+.col-lg-9 .card-body,
+.col-md-8 .card-body {
     padding: 0;
 }
 
@@ -112,27 +130,63 @@ a:hover {
     margin-bottom: 5rem;
 }
 
-/* Profile Avatar Styling */
-.figure-img.img-fluid {
+/* Profile Avatar Styling - Minimal for Sidebar */
+.col-lg-3 .figure-img.img-fluid,
+.col-md-4 .figure-img.img-fluid {
+    border-radius: 50%;
+    border: none;
+    box-shadow: var(--shadow-subtle);
+    margin-bottom: 2rem;
+}
+
+.col-lg-3 .rounded-circle,
+.col-md-4 .rounded-circle {
     border-radius: 50%;
     border: none;
     box-shadow: var(--shadow-subtle);
 }
 
-.rounded-circle {
+/* Keep Avatar Style for Main Content */
+.col-lg-9 .figure-img.img-fluid,
+.col-md-8 .figure-img.img-fluid {
     border-radius: 50%;
     border: none;
     box-shadow: var(--shadow-subtle);
 }
 
-/* Profile Text Styling */
-.text-profile-position {
+.col-lg-9 .rounded-circle,
+.col-md-8 .rounded-circle {
+    border-radius: 50%;
+    border: none;
+    box-shadow: var(--shadow-subtle);
+}
+
+/* Profile Text Styling - Minimal for Sidebar */
+.col-lg-3 .text-profile-position,
+.col-md-4 .text-profile-position {
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.col-lg-3 .text-profile-bio,
+.col-md-4 .text-profile-bio {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Keep Text Style for Main Content */
+.col-lg-9 .text-profile-position,
+.col-md-8 .text-profile-position {
     font-weight: 500;
     color: var(--text-secondary);
     margin-bottom: 2rem;
 }
 
-.text-profile-bio {
+.col-lg-9 .text-profile-bio,
+.col-md-8 .text-profile-bio {
     font-weight: 400;
     font-size: 1.1rem;
     line-height: 1.8;
@@ -207,8 +261,12 @@ img.lazy, div.lazy {
         font-size: 2rem;
     }
     
-    .card, .news-section, .education-section, 
-    .experience-section, .awards-section, .publication-section {
-        margin-bottom: 3rem;
+    .col-lg-3 .card, .col-md-4 .card, 
+    .col-lg-9 .card, .col-md-8 .card {
+        margin-bottom: 2rem;
+    }
+    
+    .col-lg-9 .card, .col-md-8 .card {
+        padding: 1.5rem !important;
     }
 }
